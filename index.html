@@ -120,6 +120,15 @@
   footer{background:#0a2540;color:#a8b3c2;padding:32px 0;text-align:center;font-size:13px;border-top:4px solid #b8985a}
   footer .wrap p{margin-bottom:6px}
   footer strong{color:#fff}
+  nav.toc{background:#0a2540;border-bottom:1px solid #1a365a;position:sticky;top:0;z-index:50;box-shadow:0 2px 4px rgba(0,0,0,0.15)}
+  nav.toc .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:0;padding:0 24px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  nav.toc a{color:#cbd5e1;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:14px 16px;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;white-space:nowrap}
+  nav.toc a:hover{color:#b8985a;border-bottom-color:#b8985a}
+  nav.toc a.first{padding-left:0}
+  @media (max-width:760px){
+    nav.toc a{font-size:11px;padding:12px 10px;letter-spacing:0.4px}
+  }
+  section[id]{scroll-margin-top:60px}
 </style>
 </head>
 <body>
@@ -137,10 +146,22 @@
   </div>
 </header>
 
+<nav class="toc">
+  <div class="wrap">
+    <a class="first" href="#summary">Summary</a>
+    <a href="#subject">Subject</a>
+    <a href="#sellout">Per-Parcel</a>
+    <a href="#comps">Comps</a>
+    <a href="#yield">Yield</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#team">Team</a>
+  </div>
+</nav>
+
 <main>
 <div class="wrap">
 
-<section>
+<section id="summary">
   <h2>Executive Summary</h2>
   <p>This analysis values <strong>6540 N Shoup Ave</strong> in West Hills as a <strong>10-home, ministerially-approved SB 1123 small-lot subdivision</strong> with five attached ADUs &mdash; 15 total residential units, 3-story product, designed by JZA Architecture and currently in PZA review (Vesting Application 4/17/2026). The valuation reverse-engineers a developer's residual land value from the West Hills/Canoga Park finished-product comp set and forward-tests it against active competing supply.</p>
   <div class="takeaways">
@@ -163,7 +184,7 @@
   </div>
 </section>
 
-<section>
+<section id="subject">
   <div class="hero-img" style="background-image:url('images/rendering.jpg');background-position:center 60%"></div>
   <h2>Subject Property</h2>
   <p>Marcus &amp; Millichap, in cooperation with LA Apartment Advisors, is pleased to present <strong>6540 N Shoup Avenue</strong> &mdash; a <strong>20,909-square-foot RA-1-RIO development parcel</strong> in West Hills with a complete architectural set submitted under California's SB 1123 ministerial subdivision pathway. The plans entitle <strong>10 detached three-story single-family dwellings</strong> arranged in a small-lot configuration with five attached accessory dwelling units (ADUs), for a total of <strong>15 residential units across approximately 16,603 SF of habitable area</strong> (exclusive of garages and ADUs).</p>
@@ -214,7 +235,7 @@
   </div>
 </section>
 
-<section>
+<section id="sellout">
   <h2>Per-Parcel Sellout Program</h2>
   <p>The architectural set defines 10 distinct parcels, each with its own SFR (and in five cases an attached ADU). Sellout pricing applies the comp-derived $/SF band to each parcel's net habitable area.</p>
 
@@ -241,7 +262,7 @@
   <p class="footer-note">Per-parcel sellout = SFR net habitable SF &times; exit $/SF + ADU lump value (where applicable). ADU value carries either as rental income (capitalized at 5% cap, $10K&ndash;$15K NOI) or sold-included premium on the host home. Per-parcel SFR SF subtotal (15,607 SF) is the architect's per-parcel area schedule; the project total habitable per the area calcs is 16,603 SF (the 996 SF difference reflects common stairs / interior circulation rolled into the project grand total). The waterfall and scenarios below use the 16,603 SF grand total.</p>
 </section>
 
-<section>
+<section id="comps">
   <h2>Comparable Sales &mdash; Finished Product</h2>
   <p>The pricing argument anchors to recent 3-bedroom single-family closings in West Hills 91307 and adjacent Woodland Hills. New-construction product commands a 10&ndash;20% premium to the existing-stock $/SF band shown below.</p>
 
@@ -344,7 +365,7 @@
   </div>
 </section>
 
-<section>
+<section id="yield">
   <h2>Developer Yield &mdash; Underwriting</h2>
   <p>The valuation reverse-engineers a developer's residual land value by deducting construction, soft, financing, and a target margin from gross sellout. Three exit-pricing scenarios bracket the land value.</p>
 
@@ -414,7 +435,7 @@
   <p class="footer-note">Margin sensitivity: at 15% margin (aggressive developer), base-case residual = ~$2.68M; at 18% margin, residual = ~$2.45M; at 25% margin (cautious developer), residual = ~$1.90M. SB1123 ministerial pathway saves an estimated 12&ndash;18 months of soft-cost carry vs. a discretionary entitlement, supporting the lean $500K soft and 10% finance carry.</p>
 </section>
 
-<section>
+<section id="pricing">
   <h2>Pricing Recommendation</h2>
   <p>The market is sending two clear signals: <strong>(1) finished new-construction 3BR product in West Hills trades into a $700&ndash;$800/SF strike zone</strong>, and <strong>(2) raw SB1123-eligible land in the SFV is asking $48&ndash;$50/SF and not transacting</strong> &mdash; the 10810 Woodley site has been sitting at $1.27M ($48.63/SF) for 190+ days bidless. Subject differentiates from raw-land competition by carrying an actively-processing PZA Review Set and an explicit 10-home unit count, which compresses a developer's entitlement risk and unlocks a real premium.</p>
 
@@ -438,7 +459,7 @@
   </div>
 </section>
 
-<section>
+<section id="team">
   <div class="section-tag">Listing Team</div>
   <h2>The LA Apartment Advisors Team</h2>
   <p>LA Apartment Advisors (LAAA) is a Marcus &amp; Millichap investment sales team specializing in multifamily, land, and for-sale development transactions across Los Angeles County. With 458+ transactions and over $1.46 billion in closed volume, we help property owners make confident investment decisions &mdash; whether buying, selling, or exploring the market.</p>
